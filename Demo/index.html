@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-POP: The Global Phenomenon</title>
+    <meta name="description" content="K-POP의 역사, 주요 아티스트, 그리고 전 세계적인 인기에 대해 알아보세요.">
+    
+    <!-- Tailwind v3.4 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kpopBlue: '#0055ff', /* Deeper, more vibrant blue */
+                        kpopPink: '#ff007a',
+                        kpopPurple: '#7000ff',
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /* Custom animations that Tailwind doesn't handle natively via CDN */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-float {
+            animation: float 10s infinite ease-in-out;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden text-slate-900 bg-slate-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-500 py-6 px-6 lg:px-20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center bg-white/40 backdrop-blur-2xl border border-white/60 shadow-lg px-10 py-5 rounded-full">
+            <div class="flex items-center gap-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" alt="Korea Flag" class="w-8 h-auto shadow-sm rounded-sm">
+                <div class="text-2xl font-black tracking-tighter bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent">
+                    K-POP WORLD
+                </div>
+            </div>
+            <div class="hidden md:flex gap-10 items-center">
+                <a href="#about" class="text-sm font-bold uppercase tracking-widest text-slate-600 hover:text-blue-600 transition-colors">About</a>
+                <a href="#history" class="text-sm font-bold uppercase tracking-widest text-slate-600 hover:text-blue-600 transition-colors">History</a>
+                <a href="#artists" class="text-sm font-bold uppercase tracking-widest text-slate-600 hover:text-blue-600 transition-colors">Artists</a>
+                <a href="#future" class="text-sm font-bold uppercase tracking-widest text-slate-600 hover:text-blue-600 transition-colors">Future</a>
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg shadow-blue-500/20">
+                    GET STARTED
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-white">
+        <!-- Background Accents -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-100 rounded-full blur-[120px] opacity-60 animate-float"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-pink-100 rounded-full blur-[120px] opacity-60"></div>
+            <div class="absolute top-[20%] right-[10%] w-[30%] h-[30%] bg-purple-100 rounded-full blur-[120px] opacity-40 animate-float" style="animation-delay: -5s"></div>
+        </div>
+        
+        <div id="hero-bg" class="absolute inset-0 z-0 bg-[url('kpop_hero_banner_1777099189808.png')] bg-cover bg-center opacity-5 mix-blend-multiply transition-transform duration-1000"></div>
+        
+        <div class="relative z-20 text-center px-4 max-w-5xl">
+            <div class="inline-flex items-center gap-3 px-6 py-2 bg-white/40 backdrop-blur-xl border border-white/60 shadow-md rounded-full text-xs font-bold tracking-[0.2em] mb-8 uppercase text-blue-600">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" class="w-5 h-auto">
+                KOREAN WAVE
+            </div>
+            <h1 class="text-7xl md:text-9xl font-black mb-8 leading-[0.9] tracking-tighter italic font-serif text-blue-900">
+                KOREAN <br/>
+                <span class="bg-gradient-to-r from-blue-700 via-blue-500 to-blue-400 bg-clip-text text-transparent">ENERGY</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-800/60 font-medium tracking-tight max-w-2xl mx-auto mb-12 leading-relaxed">
+                Experience the world's most vibrant musical phenomenon through a lens of modern aesthetics.
+            </p>
+            <div class="flex justify-center">
+                <a href="#about" class="px-12 py-5 bg-blue-600 text-white font-bold rounded-full transition-all hover:bg-blue-700 shadow-2xl shadow-blue-500/40 hover:-translate-y-1">
+                    EXPLORE THE WORLD
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-40 px-6 lg:px-20 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
+            <div>
+                <h2 class="text-5xl md:text-7xl font-black mb-10 leading-[1.1] text-blue-900">
+                    WHAT IS <br/> <span class="text-blue-600 underline decoration-blue-400 underline-offset-8">K-POP?</span>
+                </h2>
+                <p class="text-2xl text-blue-800/70 font-medium leading-relaxed italic border-l-4 border-blue-600 pl-8">
+                    "More than just a genre, it's a cultural revolution that reshaped the global entertainment landscape."
+                </p>
+            </div>
+            <div class="flex flex-col gap-8">
+                <div class="bg-white/40 backdrop-blur-xl border border-white/60 p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500">
+                    <h3 class="text-2xl font-black mb-4 flex items-center gap-3">🎶 <span>The Definition</span></h3>
+                    <p class="text-slate-500 font-medium leading-relaxed">
+                        대한민국에서 기원한 대중음악의 한 장르로, 단순히 음악적인 스타일을 넘어 화려한 퍼포먼스, 정교한 비주얼, 그리고 강력한 팬덤 문화를 포함하는 글로벌 문화 현상입니다.
+                    </p>
+                </div>
+                <div class="bg-white/40 backdrop-blur-xl border border-white/60 p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500">
+                    <h3 class="text-2xl font-black mb-4 flex items-center gap-3">🌍 <span>Global Impact</span></h3>
+                    <p class="text-slate-500 font-medium leading-relaxed">
+                        유튜브와 SNS를 통해 전 세계로 확산되었으며, 빌보드 차트 점령과 월드 투어를 통해 언어의 장벽을 넘는 문화적 영향력을 행사하고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="py-40 bg-slate-100/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-black mb-6 italic font-serif">JOURNEY</h2>
+                <p class="text-slate-400 uppercase tracking-[0.5em] text-sm font-bold">The Evolution of K-POP</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- 1990s -->
+                <div class="group bg-blue-50/40 backdrop-blur-xl border border-blue-100 p-10 rounded-[2.5rem] shadow-sm hover:bg-blue-100/60 hover:-translate-y-2 transition-all duration-500">
+                    <div class="text-blue-600 font-black mb-6 text-xl">1990s</div>
+                    <h3 class="text-3xl font-bold mb-6 text-blue-900">Foundations</h3>
+                    <p class="text-blue-800/60 leading-relaxed font-medium">1992년 <strong>서태지와 아이들</strong>의 등장으로 현대적 기틀이 마련되었으며, H.O.T. 등 1세대 아이돌이 등장했습니다.</p>
+                </div>
+                <!-- 2000s -->
+                <div class="group bg-blue-50/40 backdrop-blur-xl border border-blue-100 p-10 rounded-[2.5rem] shadow-sm hover:bg-blue-100/60 hover:-translate-y-2 transition-all duration-500">
+                    <div class="text-blue-500 font-black mb-6 text-xl">2000s</div>
+                    <h3 class="text-3xl font-bold mb-6 text-blue-900">Growth</h3>
+                    <p class="text-blue-800/60 leading-relaxed font-medium">동방신기, 빅뱅, 소녀시대 등 2세대 아이돌이 아시아 시장을 석권하며 한류의 중심이 되었습니다.</p>
+                </div>
+                <!-- Present -->
+                <div class="group bg-blue-50/40 backdrop-blur-xl border border-blue-100 p-10 rounded-[2.5rem] shadow-sm hover:bg-blue-100/60 hover:-translate-y-2 transition-all duration-500">
+                    <div class="text-blue-400 font-black mb-6 text-xl">2010s+</div>
+                    <h3 class="text-3xl font-bold mb-6 text-blue-900">Global</h3>
+                    <p class="text-blue-800/60 leading-relaxed font-medium">BTS, 블랙핑크 등이 전 세계 주류 시장에 진입하며 전 세계적인 음악 장르로 정착했습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artists Section -->
+    <section id="artists" class="py-40 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-black mb-8">GLOBAL <span class="text-pink-500 italic font-serif">ICONS</span></h2>
+                <div class="h-1 w-24 bg-pink-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="bg-blue-50/50 p-12 rounded-[3rem] border border-blue-100 hover:border-blue-300 hover:bg-blue-100/50 transition-all duration-500 group">
+                    <div class="text-blue-600 font-black text-sm tracking-[0.3em] mb-6">#01 LEGEND</div>
+                    <h3 class="text-5xl font-black mb-8 text-blue-900 group-hover:scale-105 transition-transform">BTS</h3>
+                    <p class="text-blue-800/60 font-medium leading-relaxed">전 세계 음악 시장의 기록을 경신하고 있는 21세기 팝 아이콘입니다.</p>
+                </div>
+                <div class="bg-blue-50/50 p-12 rounded-[3rem] border border-blue-100 hover:border-blue-300 hover:bg-blue-100/50 transition-all duration-500 group">
+                    <div class="text-blue-500 font-black text-sm tracking-[0.3em] mb-6">#02 SUPREME</div>
+                    <h3 class="text-5xl font-black mb-8 text-blue-900 group-hover:scale-105 transition-transform">BLACKPINK</h3>
+                    <p class="text-blue-800/60 font-medium leading-relaxed">독보적인 스타일로 전 세계를 매료시킨 글로벌 탑 걸그룹입니다.</p>
+                </div>
+                <div class="bg-blue-50/50 p-12 rounded-[3rem] border border-blue-100 hover:border-blue-300 hover:bg-blue-100/50 transition-all duration-500 group">
+                    <div class="text-blue-400 font-black text-sm tracking-[0.3em] mb-6">#03 FUTURE</div>
+                    <h3 class="text-5xl font-black mb-8 text-blue-900 group-hover:scale-105 transition-transform">NewJeans</h3>
+                    <p class="text-blue-800/60 font-medium leading-relaxed">4세대 K-POP의 새로운 패러다임을 열어가는 트렌드세터입니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Section -->
+    <section id="future" class="py-40 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-2/3 h-full bg-blue-500/10 blur-[150px] animate-pulse"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-20 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-5xl md:text-7xl font-black mb-10 leading-tight italic font-serif">CHALLENGES <br/> & FUTURE</h2>
+                    <p class="text-white/60 text-xl leading-relaxed">K-POP은 현재 지속 가능한 성장을 위한 새로운 전환점에 서 있습니다.</p>
+                </div>
+                <div class="space-y-8">
+                    <div class="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-2xl hover:bg-white/10 transition-all duration-500">
+                        <h4 class="font-bold text-2xl text-blue-400 mb-4">Sustainability</h4>
+                        <p class="text-white/40 leading-relaxed font-medium">기획사와 아티스트 간의 상생 모델과 시스템적 안정성이 요구됩니다.</p>
+                    </div>
+                    <div class="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-2xl hover:bg-white/10 transition-all duration-500">
+                        <h4 class="font-bold text-2xl text-pink-400 mb-4">Innovation</h4>
+                        <p class="text-white/40 leading-relaxed font-medium">글로벌 경쟁 속에서 K-POP만의 독창성을 유지하기 위한 끊임없는 혁신이 필요합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-32 text-center bg-white">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" alt="Korea Flag" class="w-12 h-auto mx-auto mb-12 shadow-sm">
+        <div class="text-4xl font-black mb-12 text-slate-900 italic font-serif opacity-30 tracking-tighter">K-POP WORLD</div>
+        <p class="text-slate-400 text-sm tracking-[0.3em] font-bold uppercase">
+            &copy; 2026 K-POP WORLD. ALL RIGHTS RESERVED.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
